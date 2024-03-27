@@ -22,6 +22,9 @@ for (let i = 0; i < botoes.length; i++) {
      let minutos = Marh.floor (segundos / 60);
      let horas = Math.floor(minutos / 60); 
      let dias= math.floor(horas/24)
+     segundos%=60;
+     minutos%=60;
+     horas%=60;
 
 
      return dias + " dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos";
