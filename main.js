@@ -28,10 +28,17 @@ for (let i = 0; i < botoes.length; i++) {
      let dias= math.floor(horas/24)
      segundos%=60;
      minutos%=60;
-     horas%=60;
+     horas%=24;
+
+     if(tempofinal>0){
+        return dias + " dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos";
+
+     }     
+     else{
+        return "PRAZO FINALIZADO!";
+     }                                                                                                      0   
 
 
-     return dias + " dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos";
 
 }
 
@@ -43,3 +50,10 @@ for (let i=0; i< contadores.length; i++){
 }
 atualizadaCronometro();
 setInterval(atualizaCronometro, 1000);
+function atualizaCronometro(){
+    for (let i=0; i<contadores.lenght;i++);{
+        contadores[i].textContent = calculatempo (tempos[i]);
+    }
+}
+     atualizaCronometro();
+     sentInterval(atualizaCronometro(), 1000); 
