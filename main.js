@@ -35,7 +35,7 @@ for (let i = 0; i < botoes.length; i++) {
 
      }     
      else{
-        return "PRAZO FINALIZADO!";
+        return [0,0,0,0];
      }                                                                                                      0   
 
 
@@ -43,8 +43,9 @@ for (let i = 0; i < botoes.length; i++) {
 }
 
 function atualizadaCronometro(){
+    document.getElementById("dias0").textContent= calculadoraTempo( tempos[0]);
 for (let i=0; i< contadores.length; i++){
- contadores[i].textContent= calculdoraTempo(tempos[i]);
+ //contadores[i].textContent= calculdoraTempo(tempos[i]);
 
 }
 }
